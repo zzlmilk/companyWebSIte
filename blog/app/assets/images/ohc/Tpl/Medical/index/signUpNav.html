@@ -1,0 +1,20 @@
+<!--<link rel="stylesheet" type="text/css" href="{$PUBLIC}/css/signUpNav.css" media="all" /> -->
+<script>
+    $(document).ready(function() {
+        buttomClick("#loginBut", "signon", "signoff");
+    });
+    function loginDisplay() {
+        $('#main_mask').remove();
+        $("#signup").trigger("click");
+    }
+</script>
+</head>
+    <div class="main_mask" id="main_mask">
+        <div id ="seachNav"  class="loginBoxShdow " style="*position: absolute;*top:30px; *left:450px;">
+            <a class="user_login_close" href="javascript:void(0)" onclick="$('#main_mask').remove();"></a>
+            <div style="font-size: 15px; width: 373px;"> {$message}</div>
+            <if condition="$state eq 0 "> 
+                <div id="loginBut" class="loginBut signoff" onclick="loginDisplay()"  style=""></div>
+            </if>
+        </div>
+    </div>

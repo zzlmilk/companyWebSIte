@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($location)): $i = 0; $__LIST__ = $location;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li onclick="locationcity('<?php echo ($vo); ?>')" id="locationid"><?php echo ($vo); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
